@@ -45,7 +45,8 @@ and within the folder where the 2 files are located :
 right click on the deb file select "Open with other Application" and select "Software Installer"  
 or within the terminal:  
 `sudo dpkg -i extension4Concealers_v0.0.1.deb`  
-
+ you 'll still have to toggle the Argos switch in Extensions :
+ ![Screenshot from 2023-10-21 11-50-29](https://github.com/Acktarius/extension4Concealers/assets/94026250/eec18719-9dc6-4804-a056-ba4430ede89f)
 
 # License
 Copyright © 2023 Acktarius
