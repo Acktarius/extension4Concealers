@@ -15,7 +15,7 @@ mining service to be named : *ccx-mining.service*
 
 ## Dependencies and application requirements
 need to be able to toggle the argos extention :  
-`sudo apt-get install gnome-shell-extension-prefs -y`
+`sudo apt-get -y install gnome-shell-extension-prefs`
 
 ### Argos extension :
 from [@p-e-w](https://github.com/p-e-w/argos) repository  
@@ -42,7 +42,11 @@ you are encouraged to verify signature :
 and within the folder where the 2 files are located :  
 `gpg --verify extension4Concealers_v0.0.1.deb.sig`  
 
-right click on the deb file select "Open with other Application" and select "Software Installer"  
+- :warning: in terminal : `sudo apt-get -y install gnome-shell-extension-prefs`  
+and then  
+- right click on the deb file select
+"Open with other Application"
+select "Software Installer"  
 or within the terminal:  
 `sudo dpkg -i extension4Concealers_v0.0.1.deb`  
  you 'll still have to toggle the Argos switch in Extensions :
