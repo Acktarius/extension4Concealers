@@ -42,7 +42,9 @@ you are encouraged to verify signature :
 and within the folder where the 2 files are located :  
 `gpg --verify extension4Concealers_v0.0.1.deb.sig`  
 
-- :warning: in terminal : `sudo apt-get -y install gnome-shell-extension-prefs`  
+- :warning: in terminal :
+`sudo apt-get -y install gnome-tweaks`  
+`sudo apt-get -y install gnome-shell-extension-prefs`  
 and then  
 - right click on the deb file select
 "Open with other Application"
