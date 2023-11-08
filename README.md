@@ -20,7 +20,7 @@ need to be able to toggle the argos extention :
 ### Argos extension :
 from [@p-e-w](https://github.com/p-e-w/argos) repository  
 copy the argos folder in your extensions folder  
-`cp argos@pew-worldwidemann.com ./local/share/gnome-shell/extensions/`  
+`cp argos@pew-worldwidemann.com ~/.local/share/gnome-shell/extensions/`  
   
 logout , log back in, open Extension and toggle Argos  
 
