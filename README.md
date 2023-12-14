@@ -40,17 +40,18 @@ download the deb file and its signature file,
 you are encouraged to verify signature :  
 `gpg --keyserver hkp://keyserver.ubuntu.com --search-key acktarius@protonmail.com`  
 and within the folder where the 2 files are located :  
-`gpg --verify extension4Concealers_v0.0.1.deb.sig`  
+`gpg --verify extension4Concealers_v0.0.2.deb.sig`  
 
-- :warning: in terminal :
-`sudo apt-get -y install gnome-tweaks`  
-`sudo apt-get -y install gnome-shell-extension-prefs`  
-and then  
-- right click on the deb file select
-"Open with other Application"
+- in terminal :
+`cd Downloads`  
+`sudo apt install ./extension4Concealers_v0.0.2.deb`  
+or  
+- right click on the deb file select  
+"Open with other Application"  
 select "Software Installer"  
 or within the terminal:  
-`sudo dpkg -i extension4Concealers_v0.0.1.deb`  
+
+
  you 'll still have to toggle the Argos switch in Extensions 9after loggin out and log back in):
  ![Screenshot from 2023-10-21 11-50-29](https://github.com/Acktarius/extension4Concealers/assets/94026250/eec18719-9dc6-4804-a056-ba4430ede89f)
 
