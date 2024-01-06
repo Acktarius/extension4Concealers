@@ -58,3 +58,8 @@ or within the terminal:
 # License
 Copyright © 2023 Acktarius
 Released under the terms of the BDS-3-clause
+
+---
+
+## Contact
+https://discord.gg/AcPeUwMC
