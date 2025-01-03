@@ -1,15 +1,32 @@
 #!/bin/bash
 # this file is subject to Licence
-#Copyright (c) 2023-2024, Acktarius
+#Copyright (c) 2023-2025, Acktarius
 #################################
-# get path to card
-path2card=$(readlink -f /sys/class/drm/card0/device)
-device=$(cat ${path2card}/device)
-revision=$(cat ${path2card}/revision)
+# get path to the first known amd card
 # expected device
 # RX6400 or RX6500 or RX6500XT = 0x743f
 # RX6600 or RX6600XT = 0x73ff
 # RX6650XT = 0x73ef
+# RX7800XT = 0x747e
+for ((card_num=0; card_num<=4; card_num++)); do
+    path2card="/sys/class/drm/card${card_num}/device"
+    if [ -d "${path2card}" ]; then
+        device=$(cat ${path2card}/device)
+        case "${device}" in
+            "0x743f"|"0x73ff"|"0x73ef"|"0x747e")
+                break
+                ;;
+            *)
+                continue
+                ;;
+        esac  
+    fi
+    if [ $card_num -eq 2 ]; then
+        exit 1
+    fi
+done
+
+revision=$(cat ${path2card}/revision)
 
 color_hex () {
 if [[ "$1" -lt "55" ]]; then
@@ -24,7 +41,7 @@ else
 fi
 }
 
-if [[ "${device}" != "0x743f" ]] && [[ "${device}" != "0x73ff" ]] && [[ "${device}" != "0x73ef" ]] ; then
+if [[ "${device}" != "0x743f" ]] && [[ "${device}" != "0x73ff" ]] && [[ "${device}" != "0x73ef" ]] && [[ "${device}" != "0x747e" ]] ; then
 echo "$device"
 echo "---"
 echo "not supported"
@@ -71,6 +88,17 @@ case "$device" in
 	case "$revision" in
 		"0xc1")
 		echo  "${W}RX6650XT"
+		;;
+		*)
+		echo "unknown gpu"
+		;;
+	esac
+	;;
+# RX 7800XT
+	"0x747e")
+	case "$revision" in
+		"0xc8")
+		echo  "${W}RX7800XT"
 		;;
 		*)
 		echo "unknown gpu"
