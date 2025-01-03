@@ -48,7 +48,7 @@ echo "not supported"
 exit
 else
 #Title
-gput=$(sensors | grep "edge" | cut -d "+" -f 2 | cut -d "." -f 1)
+gput=$(sensors | grep "edge" | grep "crit" | cut -d "+" -f 2 | cut -d "." -f 1)
 color_hex $gput
 
 case "$device" in
