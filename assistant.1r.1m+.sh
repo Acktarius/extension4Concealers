@@ -1,6 +1,6 @@
 #!/bin/bash
 # this file is subject to Licence
-#Copyright (c) 2023, Acktarius
+#Copyright (c) 2023-2025, Acktarius
 #################################
 
 node_active=$(systemctl status ccx-guardian.service | grep -c "Active: active (running)")
@@ -19,7 +19,6 @@ fi
 }
 
 
-
 if [[ $node_active != "1" ]] && [[ $miner_active != "1" ]]; then
 	W=":warning:"
 elif [[ $node_active != "1" ]] || [[ $miner_active != "1" ]]; then
@@ -31,9 +30,8 @@ fi
 echo "$W | iconName=cham"
 echo "---"
 s_color_hex $node_active
-echo "Node service : <span color='${hex}'>${status}</span>"
+echo "Node service : <span color='${hex}'>${status}</span> | bash='/opt/conceal-toolbox/extension4Concealers/serviceFlicker.sh ${node_active} guardian; exit'"
 s_color_hex $miner_active
-echo "Mining service : <span color='${hex}'>${status}</span>"
+echo "Mining service : <span color='${hex}'>${status}</span> | bash='/opt/conceal-toolbox/extension4Concealers/serviceFlicker.sh ${miner_active} mining; exit'"
 unset status hex
 echo "Conceal assistant | iconName=cham bash=/opt/conceal-toolbox/ccx-assistant_firefox.sh  terminal=false"
-
