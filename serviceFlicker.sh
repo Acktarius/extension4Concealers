@@ -36,7 +36,7 @@ echo -e "${GRIS}#                                                   ${WHITE}-=:+
 echo -e "${GRIS}#						    ${WHITE}-=:=."
 echo -e "${GRIS}#                                                   ${WHITE}-+:-:    .::."
 echo -e "${GRIS}#						    ${WHITE}-+==------===-"
-echo -e "${GRIS}########                                               ${WHITE}:-=-==-:${TURNOFF}"
+echo -e "${GRIS}#############################################          ${WHITE}:-=-==-:${TURNOFF}\n\n"
 
 }
 
