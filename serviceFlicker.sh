@@ -23,7 +23,7 @@ esac
 presentation (){
 echo -e "${GRIS}####################################################################"
 echo -e "#                                                                  #"
-echo -e "#-->   ${WHITE}     SERVICE FLICKER FOR ${ORANGE}ccx-mining.service   ${TURNOFF}${GRIS}           <--#"
+echo -e "#-->   ${WHITE}     SERVICE FLICKER FOR ${ORANGE}ccx-${2}.service   ${TURNOFF}${GRIS}           <--#"
 echo -e "#                                                                  #"
 echo -e "#                                                                  #"
 echo -e "#                                                                  #"
